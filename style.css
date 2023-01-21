@@ -1,5 +1,5 @@
 body{
-    background-color: darkcyan;
+    background:linear-gradient(to right bottom,rgb(72, 228, 228),rgb(7, 133, 133));
     color:aliceblue;
     font-family: poppins;
 }
