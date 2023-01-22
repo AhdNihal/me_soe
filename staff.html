@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Faculty</title>
+</head>
+<body>
+    <div class="main">
+        <div class="clks" id="stf"></div>
+        <!-- <div class="clks_2" id="stf2"></div> -->
+        <div class="circle_f circle1"></div>
+        <div class="circle_f circle2"></div>
+
+    </div>
+</body>
+<script>
+
+    var staff = [
+    {
+        "sino": 1,
+        "name": "Dr.M.R Radhakrishna Panicker",
+        "des": "PhD, IISc Bangalore",
+        "iqacNumber": 186,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/186/Dr.DRMRRPANICKER",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me1302.jpg"
+    },
+    {
+        "sino": 2,
+        "name": "Dr. Franklin R John",
+        "des": "PhD, PSG Coibathore",
+        "iqacNumber": "Not Found",
+        "link": "https://iqac.cusat.ac.in/Web/facdetails/1",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me1468.jpg"
+    },
+    {
+        "sino": 3,
+        "name": "Dr. Jacob Elias",
+        "des": "PhD, CUSAT",
+        "iqacNumber": 293,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/293/Dr.JACOBELIAS",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Jacob_photo.JPG"
+    },
+    {
+        "sino": 4,
+        "name": "Dr. Biju N",
+        "des": "PhD, IIT Madras",
+        "iqacNumber": 21,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/21/Dr.BIJUN",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/biju_photo.jpg"
+    },
+    {
+        "sino": 5,
+        "name": "Dr. Narayanan Namboothiri V N",
+        "des": "PhD, IIT Madras",
+        "iqacNumber": 318,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/318/Prof.Dr.NARAYANANNAMBOOTHIRIVN",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/my_photo1.jpg"
+    },
+    {
+        "sino": 6,
+        "name": "Dr. K. K. Saju",
+        "des": "PhD, CUSAT",
+        "iqacNumber": 451,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/451/Dr.K.K.SAJU",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/IMG-20220708-WA0018_(1).jpg"
+    },
+    {
+        "sino": 7,
+        "name": "Dr. A.B Bhasi",
+        "des": "PhD, IISc Bangalore",
+        "iqacNumber": 324,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/324/Prof.Dr.BHASIAB",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Photo-Bhasi_AB.jpg"
+    },
+    {
+        "sino": 8,
+        "name": "Dr. Tide P. S.",
+        "des": "PhD, IIT Madras",
+        "iqacNumber": 135,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/135/Prof.Dr.TIDEPS",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Tide_Photo_Yellow.jpg"
+    },
+    {
+        "sino": 9,
+        "name": "Dr. Gireesh Kumaran Thampi.B.S",
+        "des": "PhD, IIT Madras",
+        "iqacNumber": 343,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/343/DR.GIREESHKUMARANTHAMPI",
+        "photo": "https://iqac.cusat.ac.in/assets/admin/images/faces/face1.png"
+    },
+    {
+        "sino": 10,
+        "name": "Dr. James Varghese",
+        "des": "PhD, IIT Bombay",
+        "iqacNumber": 189,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/189/Dr.JAMESVARGHESE",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/james2.jpg"
+    },
+    {
+        "sino": 11,
+        "name": "Dr. Jayadas.N.H",
+        "des": "PhD, NIT Calicut",
+        "iqacNumber": 187,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/187/Prof.Dr.JAYADASNH",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/photo-jnh.jpg"
+    },
+    {
+        "sino": 12,
+        "name": "Dr. Ajithkumar.G",
+        "des": "PhD, CUSAT",
+        "iqacNumber": "Not Found ",
+        "link": "https://iqac.cusat.ac.in/Web/facdetails/1",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me1342.jpg"
+    },
+    {
+        "sino": 13,
+        "name": "Mr.Joshy.P. J",
+        "des": "MS, IIT Madras",
+        "iqacNumber": 310,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/310/Mr.JOSHYPJ",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Capture_(1).JPG"
+    },
+    {
+        "sino": 14,
+        "name": "Dr. Akhil S. Karun",
+        "des": "PhD, CSIR-NIIST",
+        "iqacNumber": 482,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/482/Dr.AKHILS.KARUN",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/MG12211420_29051988_9496325080_mail_.jpg"
+    },
+    {
+        "sino": 15,
+        "name": "Mr. Rashid Kareem",
+        "des": "M.Tech",
+        "iqacNumber": 516,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/516/Mr.RASHIDKAREEM",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/PHOTO.jpg"
+    },
+    {
+        "sino": 16,
+        "name": "Dr. Ajin C Sajeevan",
+        "des": "PhD, NIT Calicut",
+        "iqacNumber": 549,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/549/AJINCSAJEEVAN",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me80577.jpg"
+    },
+    {
+        "sino": 17,
+        "name": "Mr. Priyadarshi Dutt",
+        "des": "M.Tech",
+        "iqacNumber": 522,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/522/PRIYADARSHIDUTT",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me81067.jpg"
+    },
+    {
+        "sino": 18,
+        "name": "Mr. Faizal P M",
+        "des": "M.Tech",
+        "iqacNumber": 531,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/531/FAIZALPM",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me81050.jpg"
+    },
+    {
+        "sino": 19,
+        "name": "Mr. Febin M Suresh",
+        "des": "M.Tech",
+        "iqacNumber": 526,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/526/Mr.FEBINMSURESH",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/195A9187-copy-copy.jpg"
+    },
+    {
+        "sino": 20,
+        "name": "Mr. Kiran Mukund",
+        "des": "M.Tech",
+        "iqacNumber": 518,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/518/Mr.KIRANMUKUND",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Kiran_Mukund.jpg"
+    },
+    {
+        "sino": 21,
+        "name": "Ms. Jayashree K. S",
+        "des": "M.Tech, MBA",
+        "iqacNumber": 530,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/530/JAYASHREEKS",
+        "photo": "https://soe.cusat.ac.in/pages/division/photos/me/faculty/me81092.jpg"
+    },
+    {
+        "sino": 22,
+        "name": "Mr. Jinu Mathew",
+        "des": "M.Tech",
+        "iqacNumber": 536,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/536/Mr.JINUMATHEW",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Jinu_Mathew.jpg"
+    },
+    {
+        "sino": 23,
+        "name": "Mr. Ayyappankutty KM",
+        "des": "M.Tech",
+        "iqacNumber": 386,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/386/Mr.AYYAPPANKUTTYK.M",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/PHOTO1.jpg"
+    },
+    {
+        "sino": 24,
+        "name": "Dr. Harikrishnan. S.",
+        "des": "PhD, IIT Madras",
+        "iqacNumber": 480,
+        "link": "https://iqac.cusat.ac.in/Web/profile_view/480/Dr.HARIKRISHNANS",
+        "photo": "https://iqac.cusat.ac.in/assets/user_image/Harikrishnan.jpg"
+    },
+    {
+        "sino": 25,
+        "name": "Dr. Roy Paul",
+        "des": "PhD, CUSAT",
+        "link": "https://iqac.cusat.ac.in/Web/facdetails/1",
+        "photo": "https://iqac.cusat.ac.in/assets/admin/images/faces/face1.png"
+    },
+    {
+        "sino": 26,
+        "name": "Dr. Elias George K",
+        "des": "PhD",
+        "link": "https://iqac.cusat.ac.in/Web/facdetails/1",
+        "photo": "https://iqac.cusat.ac.in/assets/admin/images/faces/face1.png"
+    }
+]
+
+    buildStf(staff)
+
+    function buildStf(data) {
+        var boxData= document.getElementById('stf')
+
+        for(i=0;i<26;i++){
+
+            const hod = data[i].sino == 1 ? " (HOD)" : "" ;
+             console.log(hod)
+
+            var box=`
+
+            <div class="box-f">
+                <img src="${data[i].photo} " alt="${data[i].name} ">
+                <div class="name-f">
+                <h3><b>${data[i].name}</b>${hod}<br>${data[i].des}</h3>
+                <a href="${data[i].link}" class="btn-f">View Profile</a>
+                </div>
+            </div>
+            `
+            boxData.innerHTML += box
+        }
+
+        // var boxData= document.getElementById('stf2')
+
+        // for(i=14;i<27;i++){
+        //     var box =`
+        //     <div class="box-f">
+        //         <img src="${data[i].photo} " alt="${data[i].name} ">
+        //         <h3><b>${data[i].name}</b><br>${data[i].des}</h3>
+        //         <a href="${data[i].link}" class="btn-f">View Profile</a>
+        //     </div>
+        //     `
+        //     boxData.innerHTML += box
+        // }
+        
+    }
+
+    
+
+</script>
+</html>
