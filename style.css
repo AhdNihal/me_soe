@@ -188,11 +188,12 @@ body{
 }
 
 .ftr{
-    color: rgb(119, 119, 119);
-    position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  height: 90px;
-  background-color: #D0DAEE;
+    color: rgba(236, 236, 236, 0.527);
+    /* position:fixed; */
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 6vh;
+    background-color: #d0daee5d;
+    text-align-last: center;
 }
